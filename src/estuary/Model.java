@@ -11,12 +11,14 @@ import javax.swing.Timer;
  * @author Sean
  * @version 1.0 Oct 25, 2016
  */
-public class Model {
+public class Model implements Tickable {
 	
-	public int x;
-	public int y;
+	public ModelMazeGame     modelMazeGame;
+	public ModelCountingGame modelCountingGame;
+	public ModelShoreGame    modelShoreGame;
 	
-	
+	public int gameMode;
+
 	int    secondsCounter;
 	Timer  secondsTimer;
 
@@ -24,12 +26,20 @@ public class Model {
 	 * Initializes the data for all three subgames
 	 */
 	Model () {
-		x = 0;
-		y = 0;
+
+		
 	
 		secondsTimer = new Timer(1000, new MazeGameSecondsTicker(this));
 		secondsTimer.start();
 	}	
+	
+	void startGame(int number, int difficulty) {
+		
+	}
+	
+	void endCurrentGame() {
+		
+	}
 	
 	
 	
@@ -42,7 +52,7 @@ public class Model {
 	 * Is called every frame of the game to update
 	 * the current state of the game
 	 */
-	void onTick() {
+	public void onTick() {
 		System.out.println(secondsCounter);
 	}
 	

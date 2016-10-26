@@ -97,8 +97,8 @@ public class View extends JComponent {
 		g.setColor(Color.GRAY);
 		g.fillRect(0, 0, getWidth(), getHeight());
 		
-		g.setColor(Color.RED);
-		g.fillRect(model.x,  model.y,  50,  50);
+		//g.setColor(Color.RED);
+		//g.fillRect(model.x,  model.y,  50,  50);
 		
 		//System.out.println(model.x);
 	}
